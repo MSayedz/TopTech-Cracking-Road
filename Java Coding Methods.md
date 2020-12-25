@@ -1,6 +1,6 @@
 # Java Methods:
 
-Methods of Collection
+## Methods of Collection
 The Collection interface includes various methods that can be used to perform different operations on objects. These methods are available in all its subinterfaces.
 
       add() - inserts the specified element to the collection
