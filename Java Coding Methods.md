@@ -237,9 +237,9 @@ The queue is rearranged to store the smallest element to the head of the queue.
 
 * Other PriorityQueue Methods
 
-      contains(element)	Searches the priority queue for the specified element. If the element is found, it returns true, if not it returns false.
-      size()	      Returns the length of the priority queue.
-      toArray()	      Converts a priority queue to an array and returns it.      
+      contains(e)	Searches the queue for the specified element. If the element is found, it returns true, if not returns false.
+      size()	Returns the length of the priority queue.
+      toArray()	Converts a priority queue to an array and returns it.      
       isEmpty()
 
 PriorityQueue == MinHeap 
@@ -249,43 +249,46 @@ PriorityQueue == MinHeap
 
 Simple Comparator
 
-      PriorityQueue<int[]> minHeap = new PriorityQueue<>((a, b)->a[0] - b[0]);
-      PriorityQueue<int[]> maxHeap = new PriorityQueue<>((a, b)->b[0] - a[0]);
+      PriorityQueue<int[]> minHeap = new PriorityQueue<>((a, b)-> a[0] - b[0]);
+      PriorityQueue<int[]> maxHeap = new PriorityQueue<>((a, b)-> b[0] - a[0]);
 
 Heaps With inline Comparator
 
       PriorityQueue<Integer> minHeap= new PriorityQueue<Integer>(new Comparator<Integer>(){
-                public int compare(Integer a, Integer b){
-                  if(a>b)
-                    return 1;
-                  else if(a<b)
-                    return -1;
-                  else
-                    return 0;
-                }}); 
+         public int compare(Integer a, Integer b){
+             if(a>b)
+                return 1;
+              else if(a<b)
+                return -1;
+              else
+                return 0;
+       }}); 
                          
       PriorityQueue<Integer> maxHeap= new PriorityQueue<Integer>(new Comparator<Integer>(){
-                public int compare(Integer a, Integer b){
-                  if(b>a) 
-                        return 1;
-                  else if(b<a) 
-                        return -1;
-                  else 
-                        return 0;
-                }}); 
+         public int compare(Integer a, Integer b){
+            if(b>a) 
+               return 1;
+            else if(b<a) 
+               return -1;
+            else 
+               return 0;
+       }}); 
 
 Array Comparator
 
-      PriorityQueue<int[]> maxHeap = new PriorityQueue<> (new  Comparator <int []>(){
-            Public int compare(int[] a , int[] b){
-                  If (b[1] > a[1])	  return -1;
-                  else if (b[1] == a[1]) return 0;
-                  else				  return 1;
-            }});
+      PriorityQueue<int[]> maxHeap = new PriorityQueue<> (new Comparator<int[]>(){
+        Public int compare(int[] a , int[] b){
+            If(b[1] > a[1])
+               return -1;
+            else if(b[1] == a[1]) 
+               return 0;
+            else	
+               return 1;
+         }});
             
-      Queue<Row> minHeap = new PriorityQueue<>(new Comparator<Row>() {
-      @Override
-      public int compare(Row r1, Row r2) {
+      PriorityQueue<Row> minHeap = new PriorityQueue<>(new Comparator<Row>() {
+         @Override
+         public int compare(Row r1, Row r2) {
             return count(r1.row)-count(r2.row);
       }});
 
