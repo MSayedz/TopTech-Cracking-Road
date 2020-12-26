@@ -30,7 +30,86 @@ Some of the commonly used methods of the Collection interface that's also availa
       removeAll() - removes all the elements from the list
       clear() - removes all the elements from the list (more efficient than removeAll())
       
+
+### Methods of ArrayList Class
+
+Besides those basic methods, here are some more ArrayList methods that are commonly used.
+
+      sort()	Sort the arraylist elements.
+      clone()	Creates a new arraylist with the same element, size, and capacity.
+      isEmpty()	Checks if the arraylist is empty.
+      indexOf()	Searches a specified element in an arraylist and returns the index of the element.
+      contains()	Searches the arraylist for the specified element and returns a boolean result.
+      ensureCapacity()	Specifies the total element the arraylist can contain.
+ 
+   * Create an ArrayList from an Array
+      
+          ArrayList<String> arrayList = new ArrayList<>(Arrays.asList(array));
+      
+   * Create and initialize ArrayList
+      
+         ArrayList<String> animals = new ArrayList<>(Arrays.asList("Cat", "Cow", "Dog"));
+
+### Methods of Vector
+
+The Vector class also provides the resizable-array implementations of the List interface (similar to the ArrayList class). Some of the Vector methods are:
+
+   * Add Elements to Vector
+
+            add(element) - adds an element to vectors
+            add(index, element) - adds an element to the specified position
+            addAll(vector) - adds all elements of a vector to another vector
+            
+   * Access Vector Elements
+
+            get(index) - returns an element specified by the index
+            iterator() - returns an iterator object to sequentially access vector elements
+            
+   * Remove Vector Elements
    
+            remove(index) - removes an element from specified position
+            removeAll() - removes all the elements
+            clear() - removes all elements. It is more efficient than removeAll()
+            
+   * Others Vector Methods
+   
+            set()	changes an element of the vector
+            size()	returns the size of the vector
+            toArray()	converts the vector into an array
+            toString()	converts the vector into a String
+            contains()	searches the vector for specified element and returns a boolean result
+
+### Methods of Queue
+
+The Queue interface includes all the methods of the Collection interface. It is because Collection is the super interface of Queue.
+
+Some of the commonly used methods of the Queue interface are:
+
+      add() - Inserts the specified element into the queue. If the task is successful, add() returns true, if not it throws an exception.
+      offer() - Inserts the specified element into the queue. If the task is successful, offer() returns true, if not it returns false.
+      element() - Returns the head of the queue. Throws an exception if the queue is empty.
+      peek() - Returns the head of the queue. Returns null if the queue is empty.
+      remove() - Returns and removes the head of the queue. Throws an exception if the queue is empty.
+      poll() - Returns and removes the head of the queue. Returns null if the queue is empty.
+      
+ ### Methods of Deque
+
+Since Deque extends the Queue interface, it inherits all the methods of the Queue interface.
+
+Besides methods available in the Queue interface, the Deque interface also includes the following methods:
+
+      addFirst() - Adds the specified element at the beginning of the deque. Throws an exception if the deque is full.
+      addLast() - Adds the specified element at the end of the deque. Throws an exception if the deque is full.
+      offerFirst() - Adds the specified element at the beginning of the deque. Returns false if the deque is full.
+      offerLast() - Adds the specified element at the end of the deque. Returns false if the deque is full.
+      getFirst() - Returns the first element of the deque. Throws an exception if the deque is empty.
+      getLast() - Returns the last element of the deque. Throws an exception if the deque is empty.
+      peekFirst() - Returns the first element of the deque. Returns null if the deque is empty.
+      peekLast() - Returns the last element of the deque. Returns null if the deque is empty.
+      removeFirst() - Returns and removes the first element of the deque. Throws an exception if the deque is empty.
+      removeLast() - Returns and removes the last element of the deque. Throws an exception if the deque is empty.
+      pollFirst() - Returns and removes the first element of the deque. Returns null if the deque is empty.
+      pollLast() - Returns and removes the last element of the deque. Returns null if the deque is empty.
    
    
 ## Coding Library
