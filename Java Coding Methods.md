@@ -212,7 +212,105 @@ ArrayDeque provides the following methods that can be used for implementing a st
       push() - adds an element to the top of the stack
       peek() - returns an element from the top of the stack
       pop() - returns and removes an element from the top of the stack
-   
+
+### Methods of PriorityQueue
+
+* Insert Elements to PriorityQueue
+
+      add() - Inserts the specified element to the queue. If the queue is full, it throws an exception.
+      offer() - Inserts the specified element to the queue. If the queue is full, it returns false.
+
+The queue is rearranged to store the smallest element to the head of the queue.
+
+* Access PriorityQueue Elements
+      
+      peek() method return the head element without removing it
+
+* Remove PriorityQueue Elements
+
+      remove() - removes the specified element from the queue
+      poll() - returns and removes the head of the queue
+
+* Iterating Over a PriorityQueue
+
+      iterator() method to iterate over the elements of a priority queue
+
+* Other PriorityQueue Methods
+
+      contains(element)	Searches the priority queue for the specified element. If the element is found, it returns true, if not it returns false.
+      size()	      Returns the length of the priority queue.
+      toArray()	      Converts a priority queue to an array and returns it.      
+      isEmpty()
+
+PriorityQueue == MinHeap 
+
+      PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+      PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+
+Simple Comparator
+
+      PriorityQueue<int[]> minHeap = new PriorityQueue<>((a, b)->a[0] - b[0]);
+      PriorityQueue<int[]> maxHeap = new PriorityQueue<>((a, b)->b[0] - a[0]);
+
+Heaps With inline Comparator
+
+      PriorityQueue<Integer> minHeap= new PriorityQueue<Integer>(new Comparator<Integer>(){
+                public int compare(Integer a, Integer b){
+                  if(a>b)
+                    return 1;
+                  else if(a<b)
+                    return -1;
+                  else
+                    return 0;
+                }}); 
+                         
+      PriorityQueue<Integer> maxHeap= new PriorityQueue<Integer>(new Comparator<Integer>(){
+                public int compare(Integer a, Integer b){
+                  if(b>a) 
+                        return 1;
+                  else if(b<a) 
+                        return -1;
+                  else 
+                        return 0;
+                }}); 
+
+Array Comparator
+
+      PriorityQueue<int[]> maxHeap = new PriorityQueue<> (new  Comparator <int []>(){
+            Public int compare(int[] a , int[] b){
+                  If (b[1] > a[1])	  return -1;
+                  else if (b[1] == a[1]) return 0;
+                  else				  return 1;
+            }});
+            
+      Queue<Row> minHeap = new PriorityQueue<>(new Comparator<Row>() {
+      @Override
+      public int compare(Row r1, Row r2) {
+            return count(r1.row)-count(r2.row);
+      }});
+
+PriorityQeuue with Map Example
+
+      Queue<Map.Entry<String, Integer>> maxHeap = new PriorityQueue<>((a, b)->a.getValue() == b.getValue() 
+                                          ? a.getKey().compareTo(b.getKey()) : b.getValue() - a.getValue());
+      maxHeap.addAll(map.entrySet());
+
+      while(!maxHeap.isEmpty() && k-- > 0) 
+         resultList.add(maxHeap.poll().getKey());
+
+
+Why Offer Not Add !
+ 
+                 | Throws exception | Returns special value
+      -------------------------------------------------------
+      Insert     | add(e)           | offer(e)
+      Remove     | remove()         | poll()
+      Examine    | element()        | peek()
+
+
+
+
+
 ## Coding Library
 
  [Main programiz.com](https://www.programiz.com/java-programming/library)  
