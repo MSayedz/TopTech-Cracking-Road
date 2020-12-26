@@ -34,3 +34,13 @@ Both the List interface and the Set interface inherits the Collection interface.
 
 Lists can include duplicate elements. However, sets cannot have duplicate elements.
 Elements in lists are stored in some order. However, elements in sets are stored in groups like sets in mathematics.
+
+
+### Classes that Implement Queue
+Since the Queue is an interface, we cannot provide the direct implementation of it.
+
+In order to use the functionalities of Queue, we need to use classes that implement it:
+
+ * ArrayDeque
+ * LinkedList
+ * PriorityQueue
