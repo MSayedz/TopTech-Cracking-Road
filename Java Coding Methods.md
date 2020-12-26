@@ -130,6 +130,88 @@ Besides methods available in the Queue interface, the Deque interface also inclu
       pollFirst()       Returns and removes the first element of the deque. Returns null if the deque is empty.
       pollLast()        Returns and removes the last element of the deque. Returns null if the deque is empty.
    
+
+### Methods of ArrayDeque
+The ArrayDeque class provides implementations for all the methods present in Queue and Deque interface.
+
+Insert Elements to Deque
+   1. Add elements using add(), addFirst() and addLast()
+
+            add() - inserts the specified element at the end of the array deque
+            addFirst() - inserts the specified element at the beginning of the array deque
+            addLast() - inserts the specified at the end of the array deque (equivalent to add())
+Note: If the array deque is full, all these methods add(), addFirst() and addLast() throws IllegalStateException.
+
+   2. Insert elements using offer(), offerFirst() and offerLast()
+
+            offer() - inserts the specified element at the end of the array deque
+            offerFirst() - inserts the specified element at the beginning of the array deque
+            offerLast() - inserts the specified element at the end of the array deque
+
+Note: offer(), offerFirst() and offerLast() returns true if the element is successfully inserted; if the array deque is full, these methods return false.
+Note: If the array deque is full
+
+* the add() method will throw an exception
+* the offer() method returns false
+
+Access ArrayDeque Elements
+   1. Access elements using getFirst() and getLast()
+
+            getFirst() - returns the first element of the array deque
+            getLast() - returns the last element of the array deque
+Note: If the array deque is empty, getFirst() and getLast() throws NoSuchElementException.
+
+   2. Access elements using peek(), peekFirst() and peekLast() method
+
+            peek() - returns the first element of the array deque
+            peekFirst() - returns the first element of the array deque (equivalent to peek())
+            peekLast() - returns the last element of the array deque
+
+Note: If the array deque is empty, peek(), peekFirst() and getLast() throws NoSuchElementException.
+
+* Remove ArrayDeque Elements
+   1. Remove elements using the remove(), removeFirst(), removeLast() method
+
+            remove() - returns and removes an element from the first element of the array deque
+            remove(element) - returns and removes the specified element from the head of the array deque
+            removeFirst() - returns and removes the first element from the array deque (equivalent to remove())
+            removeLast() - returns and removes the last element from the array deque
+
+Note: If the array deque is empty, remove(), removeFirst() and removeLast() method throws an exception. Also, remove(element) throws an exception if the element is not found.
+
+2. Remove elements using the poll(), pollFirst() and pollLast() method
+
+            poll() - returns and removes the first element of the array deque
+            pollFirst() - returns and removes the first element of the array deque (equivalent to poll())
+            pollLast() - returns and removes the last element of the array deque
+Note: If the array deque is empty, poll(), pollFirst() and pollLast() returns null if the element is not found.
+
+3. Remove Element: using the clear() method
+
+            clear() method To remove all the elements from the array deque
+
+Iterating the ArrayDeque
+
+            iterator() - returns an iterator that can be used to iterate over the array deque
+            descendingIterator() - returns an iterator that can be used to iterate over the array deque in reverse order
+
+Other Methods
+
+      element()	Returns an element from the head of the array deque.
+      contains(element)	Searches the array deque for the specified element.
+      If the element is found, it returns true, if not it returns false.
+      size()	Returns the length of the array deque.
+      toArray()	Converts array deque to array and returns it.
+      clone() 	Creates a copy of the array deque and returns it.
+
+ArrayDeque as a Stack
+To implement a LIFO (Last-In-First-Out) stacks in Java, it is recommended to use a deque over the Stack class. The ArrayDeque class is likely to be faster than the Stack class.
+
+ArrayDeque provides the following methods that can be used for implementing a stack.
+
+      push() - adds an element to the top of the stack
+      peek() - returns an element from the top of the stack
+      pop() - returns and removes an element from the top of the stack
    
 ## Coding Library
 
