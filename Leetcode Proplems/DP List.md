@@ -4,7 +4,7 @@
 
 [best-time-to-buy-and-sell-stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 
-[min-cost-climbing-stairs(https://leetcode.com/problems/min-cost-climbing-stairs/)
+[min-cost-climbing-stairs](https://leetcode.com/problems/min-cost-climbing-stairs/)
 
 [divisor-game](https://leetcode.com/problems/divisor-game/)
 
