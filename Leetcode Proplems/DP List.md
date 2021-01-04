@@ -3,9 +3,9 @@
  
  List:
 
-    * [UC Berkeley Data Structures](https://archive.org/details/ucberkeley-webcast?&and[]=subject%3A%22Computer%20Science%22&and[]=subject%3A%22CS%22)
-    * [climbing-stairs](https://leetcode.com/problems/climbing-stairs/)
-    * https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+[UC Berkeley Data Structures](https://archive.org/details/ucberkeley-webcast?&and[]=subject%3A%22Computer%20Science%22&and[]=subject%3A%22CS%22)
+[climbing-stairs](https://leetcode.com/problems/climbing-stairs/)
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
     * https://leetcode.com/problems/min-cost-climbing-stairs/
     * https://leetcode.com/problems/divisor-game/
     * https://leetcode.com/problems/decode-ways/
