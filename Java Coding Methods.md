@@ -311,7 +311,58 @@ Why Offer Not Add !
       Examine    | element()        | peek()
 
 
+## Map
 
+Map.Entry.comparingByValue()
+      
+      
+      public class MapSortingExamples {
+ 
+          public static void main(String[] args) {
+            System.out.println("\nSorting using Java8 streams\n");
+
+              sortByValueJava8Stream();
+          }
+ 
+          private static void sortByValueJava8Stream() 
+          {
+              Map<String, Integer> unSortedMap = getUnSortedMap();
+
+              System.out.println("Unsorted Map : " + unSortedMap);
+
+              LinkedHashMap<String, Integer> sortedMap = new LinkedHashMap<>();
+              unSortedMap.entrySet().stream().sorted(Map.Entry.comparingByValue())
+                      .forEachOrdered(x -> sortedMap.put(x.getKey(), x.getValue()));
+
+              System.out.println("Sorted Map   : " + sortedMap);
+
+              LinkedHashMap<String, Integer> reverseSortedMap = new LinkedHashMap<>();
+              unSortedMap.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+                      .forEachOrdered(x -> reverseSortedMap.put(x.getKey(), x.getValue()));
+
+              System.out.println("Reverse Sorted Map   : " + reverseSortedMap);
+          }
+ 
+          private static Map<String, Integer> getUnSortedMap() 
+          {
+              Map<String, Integer> unsortMap = new HashMap<>();
+              unsortMap.put("alex", 1);
+              unsortMap.put("david", 2);
+              unsortMap.put("elle", 3);
+              unsortMap.put("charles", 4);
+              unsortMap.put("brian", 5);
+              return unsortMap;
+          }
+      }
+
+
+      Output:
+
+      Sorting using Java8 streams
+
+      Unsorted Map        : {alex=1, charles=4, david=2, brian=5, elle=3}
+      Sorted Map          : {alex=1, david=2, elle=3, charles=4, brian=5}
+      Reverse Sorted Map  : {brian=5, charles=4, elle=3, david=2, alex=1}
 
 
 ## Coding Library
